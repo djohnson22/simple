@@ -3,7 +3,7 @@ package com.eonsahead.fractalset;
 
 /**
  * Emulate a complex number.
- * @author LTabak
+ * 
  */
 public class Complex {
     private final double real;
