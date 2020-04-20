@@ -68,10 +68,10 @@ public class FractalSetPanel extends JPanel {
         double yMin = 0;
         double yMax = BITMAP_HEIGHT - 1;
         
-        double uMin =  0.25;
-        double uMax =  0.50;
-        double vMin =  0.25;
-        double vMax =  0.50;
+        double uMin =  0.15;
+        double uMax =  0.70;
+        double vMin =  0.15;
+        double vMax =  0.70;
         
         for( int row = 0; row < BITMAP_HEIGHT; row++ ) {
             double y = row;
@@ -86,7 +86,7 @@ public class FractalSetPanel extends JPanel {
                 
                 int count = 0;
                
-                while( z.magnitudeSquared() < 4.0 && count < 64 ) {
+                while( z.magnitudeSquared() < 8.0 && count < 64 ) {
                     // z = z^2 + c
                     z = z.multiply(z);
                     z = z.add(c);
