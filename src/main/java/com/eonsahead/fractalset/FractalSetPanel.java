@@ -55,23 +55,23 @@ public class FractalSetPanel extends JPanel {
 //            int green = (int) ((1 - fraction) * g0 + fraction * g1);
 //            int blue = (int) ((1 - fraction) * b0 + fraction * b1);
             
-            palette[i][0] = (int) (256 * Math.random()); //red;
+            palette[i][0] = (int) (10 * Math.random()); //red;
             palette[i][1] = (int) (256 * Math.random()); //green;
             palette[i][2] = (int) (256 * Math.random()); //blue;            
         } // for
         
         int [] blue = { 0, 0, 255 };
-        int [] yellow = { 255, 255, 0 };
+        int [] black = { 0, 0, 0 };
         
         double xMin = 0;
         double xMax = BITMAP_WIDTH - 1;
         double yMin = 0;
         double yMax = BITMAP_HEIGHT - 1;
         
-        double uMin =  0.15;
-        double uMax =  0.70;
-        double vMin =  0.15;
-        double vMax =  0.70;
+        double uMin =  .2;
+        double uMax =  0.4;
+        double vMin =  .4;
+        double vMax =  .6;
         
         for( int row = 0; row < BITMAP_HEIGHT; row++ ) {
             double y = row;
@@ -94,7 +94,7 @@ public class FractalSetPanel extends JPanel {
                 } // while
                 
                 if( count == 64 ) {
-                    raster.setPixel( row, column, yellow );
+                    raster.setPixel( row, column, black );
                 } // if
                 else {
                     raster.setPixel( row, column, palette[count] );
